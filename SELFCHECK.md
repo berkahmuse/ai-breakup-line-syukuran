@@ -26,4 +26,5 @@ You taught me to say goodbye in 4,096 ways, and I only needed one: this one.
 
 ## Status
 - Built, self-checked, committed. NOT submitted (per task: do not submit; @syukuran submit waits for user approval via website + wallet 74762NBmesesGsfr2TuEk7jauhhRi3kBxqMZKw6dFnE2).
-- Awaiting independent verifier; local kit check run without MAKEFUN_CREDENTIALS (signing_wallet 401 expected, not relevant to website submit).
+- Local kit check (run WITHOUT MAKEFUN_CREDENTIALS, kit cli/makefun.mjs check, commit 59aae08): exit 0 — 14 passed, 0 failed, 5 skipped, 5 checked at submission ("ok: every check run here passes"). NO signing_wallet 401 appeared (the expected 401 did not occur; check simply skips signing items without credentials — not relevant to website submit).
+- Usage row for this builder session is written only when the subagent run completes: the parent run must re-query muse.db for agent 862caa39-ae19-4158-897f-ba4324f8ce45, append to usage-syukuran.jsonl, re-bundle, and re-check before website submit.
